@@ -35,7 +35,7 @@
             </intent-filter>
         </service>
         <activity android:name=".DialogActivity"
-            android:theme="@android:style/Theme.Material.Dialog"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"
             android:exported="false"
             android:excludeFromRecents="true"/>
     </application>
