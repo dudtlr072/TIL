@@ -51,6 +51,8 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private void handleNow(String title, String message) {
         Log.d(TAG, "Short lived task is done.");
         sendNotification("시료 반납");
+        PushWakeLock.acquireCpuWakeLock(this);
+        PushWakeLock.releaseCpuLock();
 
         Intent intent = new Intent(this, DialogActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
