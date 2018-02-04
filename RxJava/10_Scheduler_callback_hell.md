@@ -125,7 +125,7 @@ Happy Callback Heaven by RxJava2!!
 ## 동시성 네트워크 호출
 
 > - concatWith()함수를 결국 첫번째 Observable의 데이터 발행이 끝날때까지 기다려야 한다.
-> - 첫 번째 URL과 두 번째 URL요청을 동시에 수행하고 결과만 조합한다면 좀더 빠른 성능향상을 기대하 수 있다.
+> - 첫 번째 URL과 두 번째 URL요청을 동시에 수행하고 결과만 조합한다면 좀더 빠른 성능향상을 기대할 수 있다.
 
 ```java
 Utils.setStartTime();
@@ -147,4 +147,3 @@ RxCachedThreadScheduler-1 | 1370ms |
 >> Approachable is better than simple.
 >> Happy Callback Heaven by RxJava2!!
 ```
-
