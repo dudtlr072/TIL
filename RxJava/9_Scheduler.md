@@ -2,8 +2,6 @@
 
 스케줄러는 스레드를 지정할 수 있게 해준다. 기본적으로 subscribeOn()과 observeOn() 함수를 통해 지정되며, Observable 함수에서 바로 사용하는것도 가능하다. 
 
-![scheduler](http://reactivex.io/documentation/operators/images/schedulers.png)
-
 > 기본적인 스케줄러의 특징은 아래와 같다.
 >
 > - **스케줄러는 RxJava코드를 어느 Thread에서 실행할지 지정**할 수 있다.
