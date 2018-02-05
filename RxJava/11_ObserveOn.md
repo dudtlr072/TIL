@@ -15,7 +15,7 @@
 >   - **publish()는 connect()를 직접 호출** 해줘야 하는 함수이다.
 >   - **refCount()는 subscribe()를 어떤 Observable에서든 한번 하기만하면 자동으로 connect()가 호출**되는 함수이다.
 >   - 예제 코드에서는 **각 subscribe()가 거의 동시에 이루어 지기 때문에 API call은 한번만** 이루어지고, 각 subscribe()에서는 결과값만 받을 수 있다.
-
+>     ![share](http://reactivex.io/documentation/operators/images/publishRefCount.c.png)
 ```java
 private static final String URL = "https://api.openweathermap.org/data/2.5/weather?q=London&APPID=";
 private static final String API_KEY = "****************************";
