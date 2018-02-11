@@ -49,7 +49,7 @@ RxAndroid는 RxJava에 최소한의 클래스를 추가하여 안드로이드 �
 
 ## RxLifecycle 라이브러리
 
-안드로이드 앱에서 subscription할 때 발생할 수 있는 메모리 누수를 방지하기 위해 사용하며, 화면이 종료될때 자동으로 dispose()를 해준다.
+안드로이드 앱에서 subscription할 때 발생할 수 있는 메모리 누수를 방지하기 위해 사용하며, 화면이 종료될때 자동으로 dispose()를 해준다. subscription을 모아놓았다가 한번에 dispose()를 할 필요가 없다.
 
 ```java
 public class MainActivity extends RxAppCompatActivity {
@@ -70,4 +70,3 @@ public class MainActivity extends RxAppCompatActivity {
     }
 }
 ```
-
