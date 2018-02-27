@@ -23,6 +23,7 @@ public class MainActivity extends RxAppCompatActivity {
 ```
 
 
+
 ## 추천 검색어 기능 구현하기
 
 > - RxTextView.textChangeEvents() 활용

@@ -6,9 +6,6 @@ class PACKET{
     int packet_no;
     int prior_level;
     PACKET next;
-    void print() {
-        System.out.println("packet_no: " + packet_no + " / prior_level: " + prior_level + " / next: " + next);
-    }
 }
 
 public class Main {
@@ -23,29 +20,22 @@ public class Main {
         PACKET head = new PACKET();
         head.next = buffer;
 
-//        if (inner_buf.next == null) {
-//            last_packet.next = pac;
-//            last_packet = pac;
-//            return true;
-//        }
+        PACKET front = head.next;
 
-        while(head.next.next != null) {
-            if (pac.prior_level < head.next.prior_level
-                    || (pac.prior_level == head.next.prior_level && pac.packet_no < head.next.packet_no)) {
-                System.out.println("(" + pac.packet_no + ", " + pac.prior_level + ") / (" + head.next.packet_no + ", " + head.next.prior_level + ")");
-                pac.next = head.next;
-                head.next = pac;
-                System.out.println("----------------");
+        while(front.next != null) {
+            if (pac.prior_level < front.next.prior_level
+                    || (pac.prior_level == front.next.prior_level && pac.packet_no < front.next.packet_no)) {
+                pac.next = front.next;
+                front.next = pac;
                 return true;
             } else {
-                PACKET temp = head.next;
-                head.next = temp.next;
+                head.next = front.next;
+                front = head.next;
             }
         }
 
         last_packet.next = pac;
         last_packet = pac;
-        System.out.println("----------------");
         return true;
     }
 
@@ -66,10 +56,6 @@ public class Main {
         m.buffer = new PACKET();
         m.sc = new Scanner(System.in);
         m.last_packet = m.buffer;
-
-        m.buffer.print();
-        System.out.println("buffer: " + m.buffer);
-        System.out.println("last: " + m.last_packet);
 
         int N = m.sc.nextInt(); // 패킷의 수 입력
         // 패킷의 수신
