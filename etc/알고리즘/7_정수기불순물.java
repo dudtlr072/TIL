@@ -16,8 +16,8 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        data_M = new char[100][100];
-        data_P = new char[100][100];
+        data_M = new char[101][101];
+        data_P = new char[101][101];
 
         // 측정데이터 읽기
         M = sc.nextInt();
@@ -42,19 +42,15 @@ public class Main {
     int checkPattern(int si, int sj)
     {
         int i, j;
-//        System.out.println("SI: " + si + " / SJ: " + sj);
 
         // 측정데이터와 불순물데이터를 비교
         for (i = 1; i <= P; i++) {
             for (j = 1; j <= P; j++) {
-//                System.out.println("data_M["+(si + i - 1)+"]["+(sj + j - 1)+"]: "+data_M[si + i - 1][sj + j - 1]+" / data_P["+i+"]["+j+"]: "+data_P[i][j]);
                 if (data_M[si + i - 1][sj + j - 1] != data_P[i][j]) {
-//                    System.out.println("--------------");
                     return 0;
                 }
             }
         }
-//        System.out.println("--------------");
         return 1;
     }
 
