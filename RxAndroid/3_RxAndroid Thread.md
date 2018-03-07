@@ -10,7 +10,7 @@
 
 AsyncTask<Params, Progress, Result> 클래스를 선언할때 들어가는 Generic타입은 아래와 같다.
 
-> - Params : doInBackground()의 파라미터 타입, execute() 함수의 인자값
+> - Params : doInBack ground()의 파라미터 타입, execute() 함수의 인자값
 > - Progress : doInBackground()작업 시 진행 단위의 타입, onProgressUpdate()의 파라미터 타입
 > - Result : doInBackground()의 리턴 타입, onPostExecute()의 파라미터 타입
 
