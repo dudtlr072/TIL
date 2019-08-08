@@ -8,24 +8,15 @@ blackCount = 0
 whiteTotalPower = 0
 blackTotalPower = 0
 
-while True:
-    inputValue = input()
-    if inputValue is "":
-        break
-    item = list(map(int, inputValue.split()))
+index = 0
+
+
+def save_data(index, line):
+    item = list(map(int, line.split()))
     item.append(0)
+    item.append(index)
     whiteList.append(item)
     blackList.append(item)
-# while True:
-#     try:
-#         line = input()
-#     except EOFError:
-#         break
-#     finally:
-#         item = list(map(int, line.split()))
-#         item.append(0)
-#         whiteList.append(item)
-#         blackList.append(item)
 
 
 def compareWhite(x, y):
@@ -56,6 +47,22 @@ def compareBlack(x, y):
             return 0
 
 
+# while True:
+#     line = input()
+#     if line is "":
+#         break
+#     save_data(index, line)
+#     index += 1
+
+while True:
+    try:
+        line = input()
+    except EOFError:
+        break
+    finally:
+        save_data(index, line)
+        index += 1
+
 whiteList.sort(key=cmp_to_key(compareWhite))
 blackList.sort(key=cmp_to_key(compareBlack))
 
@@ -73,7 +80,6 @@ for i in range(0, len(whiteList)):
     blackIndex = blackList.index(whiteList[i])
     whiteIndex = whiteList.index(blackList[i])
     # print(whiteList[i], " / ", blackList[i], " / [", i, "],", blackIndex, ",", whiteIndex)
-
     # print("whiteCount:", whiteCount)
     # print("blackCount:", blackCount)
 
