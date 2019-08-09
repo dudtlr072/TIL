@@ -44,7 +44,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.1633">
+  <component name="RunManager" selected="Python.test">
     <configuration name="퇴사" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,8 +152,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.1633" />
         <item itemvalue="Python.test" />
+        <item itemvalue="Python.1633" />
         <item itemvalue="Python.15486" />
         <item itemvalue="Python.11726" />
         <item itemvalue="Python.퇴사" />

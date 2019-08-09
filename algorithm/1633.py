@@ -18,9 +18,9 @@ def compareWhite(x, y):
         return 1
     else:
         if x[1] > y[1]:
-            return -1
-        elif x[1] < y[1]:
             return 1
+        elif x[1] < y[1]:
+            return -1
         else:
             return 0
 
@@ -32,9 +32,9 @@ def compareBlack(x, y):
         return 1
     else:
         if x[0] > y[0]:
-            return -1
-        elif x[0] < y[0]:
             return 1
+        elif x[0] < y[0]:
+            return -1
         else:
             return 0
 
@@ -80,11 +80,28 @@ for i in range(0, len(whiteList)):
             whiteCount += 1
             blackList[blackIndex][2] = 1
             print("[1] white count:", whiteCount, " / value:", whiteList[i][0], " / white total:", whiteTotalPower)
-        elif (valueCompare(whiteList[i]) is -1 and blackCount < TotalNum) or (valueCompare(whiteList[i]) is 0 and blackCount <= whiteCount):
-            blackTotalPower += blackList[blackIndex][1]
-            blackCount += 1
-            blackList[blackIndex][2] = 1
-            print("[1_1] black count:", blackCount, " / value:", blackList[blackIndex][1], " / black total:", blackTotalPower)
+        elif valueCompare(whiteList[i]) is -1:
+            if blackCount < TotalNum:
+                blackTotalPower += blackList[blackIndex][1]
+                blackCount += 1
+                blackList[blackIndex][2] = 1
+                print("[1_1] black count:", blackCount, " / value:", blackList[blackIndex][1], " / black total:", blackTotalPower)
+            elif whiteCount < TotalNum:
+                whiteTotalPower += whiteList[i][0]
+                whiteCount += 1
+                blackList[i][2] = 1
+                print("[1_2] white count:", whiteCount, " / value:", whiteList[i][0], " / white total:", whiteTotalPower)
+        elif valueCompare(whiteList[i]) is 0:
+            if blackCount <= whiteCount:
+                blackTotalPower += blackList[blackIndex][1]
+                blackCount += 1
+                blackList[blackIndex][2] = 1
+                print("[1_3] black count:", blackCount, " / value:", blackList[blackIndex][1], " / black total:", blackTotalPower)
+            else:
+                whiteTotalPower += whiteList[i][0]
+                whiteCount += 1
+                blackList[i][2] = 1
+                print("[1_4] white count:", whiteCount, " / value:", whiteList[i][0], " / white total:", whiteTotalPower)
 
     if blackList[i][2] is not 1:
         if valueCompare(blackList[i]) is -1 and (i < whiteIndex or (whiteCount is TotalNum)) and blackCount < TotalNum:
@@ -92,9 +109,26 @@ for i in range(0, len(whiteList)):
             blackCount += 1
             whiteList[whiteIndex][2] = 1
             print("[2] black count:", blackCount, " / value:", blackList[i][1], " / black total:", blackTotalPower)
-        elif (valueCompare(blackList[i]) is -1 and whiteCount < TotalNum) or (valueCompare(blackList[i]) is 0 and whiteCount <= blackCount):
-            whiteTotalPower += whiteList[whiteIndex][1]
-            whiteCount += 1
-            whiteList[whiteIndex][2] = 1
-            print("[2_1] white count:", whiteCount, " / value:", whiteList[whiteIndex][0], " / white total:", whiteTotalPower)
+        elif valueCompare(blackList[i]) is 1:
+            if whiteCount < TotalNum:
+                whiteTotalPower += whiteList[whiteIndex][0]
+                whiteCount += 1
+                whiteList[whiteIndex][2] = 1
+                print("[2_1] white count:", whiteCount, " / value:", whiteList[whiteIndex][0], " / white total:", whiteTotalPower)
+            elif blackCount < TotalNum:
+                blackTotalPower += blackList[i][1]
+                blackCount += 1
+                blackList[i][2] = 1
+                print("[2_2] black count:", blackCount, " / value:", blackList[i][1], " / black total:", blackTotalPower)
+        elif valueCompare(blackList[i]) is 0:
+            if whiteCount <= blackCount:
+                whiteTotalPower += whiteList[whiteIndex][0]
+                whiteCount += 1
+                whiteList[whiteIndex][2] = 1
+                print("[2_3] white count:", whiteCount, " / value:", whiteList[whiteIndex][0], " / white total:", whiteTotalPower)
+            else:
+                blackTotalPower += blackList[i][1]
+                blackCount += 1
+                blackList[i][2] = 1
+                print("[2_4] black count:", blackCount, " / value:", blackList[i][1], " / black total:", blackTotalPower)
 print(whiteTotalPower + blackTotalPower)
