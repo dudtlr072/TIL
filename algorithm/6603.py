@@ -11,21 +11,22 @@ while 1:
     total_list.append([count, line])
 
 
-def print_func(N, list, index, depth, pre_str):
+def print_func(list, index, depth, pre_str):
+    N = len(list)
     sum_str = pre_str + str(list[index]) + " "
 
     if depth is cnt - 1:
         print(sum_str, end='\n')
     else:
         for i in range(index + 1, min(N - 4 + depth, N)):
-            print_func(N, list, i, depth + 1, sum_str)
+            print_func(list, i, depth + 1, sum_str)
 
 
-def lotto(N, list):
-    for start_index in range(0, N - cnt + 1):
-        print_func(N, list, start_index, 0, "")
+def lotto(list):
+    for start_index in range(0, len(list) - cnt + 1):
+        print_func(list, start_index, 0, "")
     print("\n", end='')
 
 
 for i in range(0, len(total_list)):
-    lotto(total_list[i][0], total_list[i][1])
+    lotto(total_list[i][1])
