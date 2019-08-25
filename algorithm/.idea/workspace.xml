@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68c3cdc3-8f15-4e0f-8f9e-e2e84e51ddd6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/2606.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/algorithm.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/algorithm.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/6603.py" beforeDir="false" afterPath="$PROJECT_DIR$/6603.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +45,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.6603">
+  <component name="RunManager" selected="Python.2606">
     <configuration name="1309" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -107,7 +109,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="6603" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2606" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="algorithm" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -119,7 +121,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/6603.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2606.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -151,10 +153,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.6603" />
+        <item itemvalue="Python.2606" />
+        <item itemvalue="Python.1309" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.1633" />
-        <item itemvalue="Python.1309" />
         <item itemvalue="Python.15486" />
       </list>
     </recent_temporary>
