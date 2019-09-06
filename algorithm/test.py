@@ -1,3 +1,14 @@
-7 1 2 3 4 5 6 7
-10 1 2 3 5 6 7 8 13 21 34
-0
+stack = []
+
+def put(value):
+    stack.append(value)
+
+def pop():
+    return stack.pop()
+
+put(1)
+print(stack)
+put(2)
+print(stack)
+pop()
+print(stack)
