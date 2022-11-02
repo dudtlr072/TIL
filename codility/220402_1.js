@@ -54,6 +54,20 @@ function solution(X, Y, D) {
     return (rest > 0 && D >= rest) ? answer + 1 : answer;
 }
 
-console.log(solution(1, 5 ,2));
-console.log(solution(10, 85 ,30));
-console.log(solution(5, 999999999 ,888888888));
+// 44%
+// Performance 점수가 너무 낮게 나옴...
+let result = 0;
+function solution_2(X, Y, D) {
+    if (X >= Y) {
+      console.log("result", result);
+      return result;
+    } else {
+      X = X + D;
+      result++;
+      console.log("X:"+X+" Y:"+Y+" D:"+D);
+      return solution_2(X, Y, D);
+    }
+}
+
+console.log(solution_2(1, 5 ,2));
+console.log(solution_2(10, 85 ,30));
